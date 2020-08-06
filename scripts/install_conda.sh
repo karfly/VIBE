@@ -8,9 +8,11 @@ conda create -n $CONDA_ENV_NAME python=3.7
 eval "$(conda shell.bash hook)"
 conda activate $CONDA_ENV_NAME
 
+pip install --upgrade pip==19
+
 which python
 which pip
 
 pip install numpy==1.17.5 torch==1.4.0 torchvision==0.5.0
 pip install git+https://github.com/giacaglia/pytube.git --upgrade
-pip install -r requirements.txt
+yes | pip install -r requirements.txt
