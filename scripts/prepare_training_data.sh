@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+export CONDA_ENV_NAME=vibe-env
+eval "$(conda shell.bash hook)"
+conda activate $CONDA_ENV_NAME
+
 mkdir -p ./data/vibe_db
 export PYTHONPATH="./:$PYTHONPATH"
 
